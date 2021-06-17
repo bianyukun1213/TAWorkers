@@ -111,6 +111,7 @@ def fill_in():
             elif item[2] == '县镇非农':
                 zd5.select_by_visible_text('县镇非农')
             zjdm.select_by_visible_text('无宗教信仰')
+            break
     driver.switch_to.default_content()
     if flag_found == False:
         msg = '在“data.xlsx”中未找到“'+xm+'”同学的信息！'
