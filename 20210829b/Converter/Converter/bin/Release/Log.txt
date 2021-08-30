@@ -27,3 +27,11 @@
 2021-08-30 13:08:39.3686|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
 2021-08-30 13:08:41.1163|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
 2021-08-30 13:08:44.6593|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
+2021-08-30 15:24:10.0425|INFO|Converter.MainForm|1|窗口已加载。
+2021-08-30 15:24:10.0814|INFO|Converter.MainForm|1|读取输入目录为 D:\Desktop。
+2021-08-30 15:24:10.0814|INFO|Converter.MainForm|1|读取输出目录为 D:\Desktop。
+2021-08-30 15:24:10.1043|INFO|Converter.MainForm|1|保存输入目录为 D:\Desktop，输出目录为 D:\Desktop。
+2021-08-30 15:24:10.1083|INFO|Converter.MainForm|1|启动文件监视。
+2021-08-30 15:24:44.1782|INFO|Converter.MainForm|1|共处理 0 个文件。
+2021-08-30 15:24:45.1049|INFO|Converter.MainForm|1|共处理 0 个文件。
+2021-08-30 15:24:46.6867|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
