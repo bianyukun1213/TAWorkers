@@ -1,0 +1,7 @@
+D:\Documents\GitHub\TAWorkers\20210829a\Process\Process\bin\Release\Process.exe.config
+D:\Documents\GitHub\TAWorkers\20210829a\Process\Process\bin\Release\Process.exe
+D:\Documents\GitHub\TAWorkers\20210829a\Process\Process\bin\Release\Process.pdb
+D:\Documents\GitHub\TAWorkers\20210829a\Process\Process\obj\Release\Process.csproj.AssemblyReference.cache
+D:\Documents\GitHub\TAWorkers\20210829a\Process\Process\obj\Release\Process.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\TAWorkers\20210829a\Process\Process\obj\Release\Process.exe
+D:\Documents\GitHub\TAWorkers\20210829a\Process\Process\obj\Release\Process.pdb

@@ -1,0 +1,16 @@
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\bin\Debug\Process2.exe.config
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\bin\Debug\Process2.exe
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\bin\Debug\Process2.pdb
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\obj\Debug\Process2.csproj.AssemblyReference.cache
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\obj\Debug\Process2.Properties.Resources.resources
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\obj\Debug\Process2.csproj.GenerateResource.cache
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\obj\Debug\Process2.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\obj\Debug\Process2.exe
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\obj\Debug\Process2.pdb
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\bin\Debug\NLog.dll
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\bin\Debug\NLog.xml
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\obj\Debug\Process2.csproj.CopyComplete
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\obj\Debug\Process2.MainForm.resources
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\bin\Debug\NLog.config
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\bin\Debug\NLog.Windows.Forms.dll
+D:\Documents\GitHub\TAWorkers\20210829b\Process2\Process2\bin\Debug\NLog.Windows.Forms.xml
