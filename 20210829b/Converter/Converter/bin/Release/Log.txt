@@ -1,0 +1,29 @@
+2021-08-30 13:03:03.9483|INFO|Converter.MainForm|1|窗口已加载。
+2021-08-30 13:03:04.0071|INFO|Converter.MainForm|1|读取输入目录为 D:\Desktop。
+2021-08-30 13:03:04.0181|INFO|Converter.MainForm|1|读取输出目录为 D:\Desktop。
+2021-08-30 13:03:04.0360|INFO|Converter.MainForm|1|保存输入目录为 D:\Desktop，输出目录为 D:\Desktop。
+2021-08-30 13:03:04.0360|INFO|Converter.MainForm|1|启动文件监视。
+2021-08-30 13:03:43.0417|INFO|Converter.MainForm|1|窗口已加载。
+2021-08-30 13:03:43.0877|INFO|Converter.MainForm|1|读取输入目录为 D:\Desktop。
+2021-08-30 13:03:43.0877|INFO|Converter.MainForm|1|读取输出目录为 D:\Desktop。
+2021-08-30 13:03:43.1057|INFO|Converter.MainForm|1|保存输入目录为 D:\Desktop，输出目录为 D:\Desktop。
+2021-08-30 13:03:43.1057|INFO|Converter.MainForm|1|启动文件监视。
+2021-08-30 13:03:50.0402|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
+2021-08-30 13:04:08.3704|INFO|Converter.MainForm|1|窗口已加载。
+2021-08-30 13:04:08.4093|INFO|Converter.MainForm|1|读取输入目录为 D:\Desktop。
+2021-08-30 13:04:08.4093|INFO|Converter.MainForm|1|读取输出目录为 D:\Desktop。
+2021-08-30 13:04:08.4283|INFO|Converter.MainForm|1|保存输入目录为 D:\Desktop，输出目录为 D:\Desktop。
+2021-08-30 13:04:08.4283|INFO|Converter.MainForm|1|启动文件监视。
+2021-08-30 13:04:09.7176|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
+2021-08-30 13:05:36.6815|INFO|Converter.MainForm|1|窗口已加载。
+2021-08-30 13:05:36.7264|INFO|Converter.MainForm|1|读取输入目录为 D:\Desktop。
+2021-08-30 13:05:36.7264|INFO|Converter.MainForm|1|读取输出目录为 D:\Desktop。
+2021-08-30 13:05:36.7453|INFO|Converter.MainForm|1|保存输入目录为 D:\Desktop，输出目录为 D:\Desktop。
+2021-08-30 13:05:36.7453|INFO|Converter.MainForm|1|启动文件监视。
+2021-08-30 13:05:40.4190|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
+2021-08-30 13:05:51.2565|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
+2021-08-30 13:07:15.7470|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
+2021-08-30 13:08:34.0769|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
+2021-08-30 13:08:39.3686|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
+2021-08-30 13:08:41.1163|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
+2021-08-30 13:08:44.6593|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
