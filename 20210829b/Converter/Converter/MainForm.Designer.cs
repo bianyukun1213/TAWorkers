@@ -213,7 +213,7 @@ namespace Converter
             this.buttonCheckForUpdate.TabIndex = 5;
             this.buttonCheckForUpdate.Text = "检查更新(&U)";
             this.buttonCheckForUpdate.UseVisualStyleBackColor = true;
-            this.buttonCheckForUpdate.Click += new System.EventHandler(this.ButtonCheckForUpdate_Click);
+            this.buttonCheckForUpdate.Click += new System.EventHandler(this.ButtonCheckForUpdates_Click);
             // 
             // MainForm
             // 

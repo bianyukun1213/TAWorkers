@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using AutoUpdaterDotNET;
-
+using System.Net;
+using NLog.Config;
 
 namespace Converter
 {
@@ -17,6 +18,11 @@ namespace Converter
         private FileSystemSafeWatcher safeWatcher;
         private string input;
         private string output;
+#if DEBUG
+        private const bool DEBUG = true;
+#else
+        private const bool DEBUG = false;
+#endif
         public MainForm()
         {
             InitializeComponent();
@@ -26,7 +32,22 @@ namespace Converter
         {
             Text += " " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             logger = LogManager.GetCurrentClassLogger();
-            logger.Info("窗口已加载。");
+            if (DEBUG)
+            {
+                LoggingConfiguration lc = LogManager.Configuration;
+                LoggingRule lr = lc.LoggingRules.FirstOrDefault(
+                    r => r.Targets.Any(
+                        t => t.Name == "logRichTextBox"
+                    )
+                );
+                if (lr != null)
+                    lc.LoggingRules.Remove(lr);
+                lc.AddRule(LogLevel.Trace, LogLevel.Fatal, "logRichTextBox");
+                LogManager.ReconfigExistingLoggers();
+                logger.Debug("程序运行在 Debug 配置下。");
+                Text += " [Debug]";
+            }
+            CheckForUpdates(false);
             safeWatcher = new FileSystemSafeWatcher
             {
                 NotifyFilter = NotifyFilters.FileName
@@ -150,30 +171,61 @@ namespace Converter
                 e.Effect = DragDropEffects.None;
         }
 
-        private void SaveSettings()
-        {
-            safeWatcher.EnableRaisingEvents = false;
-            Properties.Settings.Default.InputDirectory = input;
-            Properties.Settings.Default.OutputDirectory = output;
-            Properties.Settings.Default.Save();
-            string tmp1 = input;
-            string tmp2 = output;
-            if (string.IsNullOrEmpty(tmp1))
-                tmp1 = "空";
-            if (string.IsNullOrEmpty(tmp2))
-                tmp2 = "空";
-            logger.Info("保存输入目录为 {0}，输出目录为 {1}。", tmp1, tmp2);
-            if (!string.IsNullOrEmpty(input) && !string.IsNullOrEmpty(output))
-            {
-                safeWatcher.Path = input;
-                safeWatcher.EnableRaisingEvents = true;
-                logger.Info("启动文件监视。");
-            }
-        }
-
         private void ButtonProcess_Click(object sender, EventArgs e)
         {
             ProcessFiles();
+        }
+
+        private void MainForm_SizeChanged(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+                notifyIcon1.Visible = true;
+                notifyIcon1.ShowBalloonTip(5000, "通知", "程序已最小化到托盘，双击图标显示主窗口。", ToolTipIcon.Info);
+                logger.Info("最小化到托盘。");
+            }
+        }
+
+        private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            RecoverWindow();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            notifyIcon1.Dispose();
+            safeWatcher.Dispose();
+        }
+
+        private void ContextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem.Name == "toolStripMenuItem1")
+                RecoverWindow();
+            else
+            {
+                notifyIcon1.Dispose();
+                safeWatcher.Dispose();
+                Environment.Exit(0);
+            }
+        }
+
+        private void RecoverWindow()
+        {
+            Show();
+            WindowState = FormWindowState.Normal;
+            notifyIcon1.Visible = false;
+        }
+
+        private void ButtonCheckForUpdates_Click(object sender, EventArgs e)
+        {
+            CheckForUpdates();
+        }
+
+        private void ButtonAbout_Click(object sender, EventArgs e)
+        {
+            AboutBox1 ab = new AboutBox1();
+            ab.Show();
         }
 
         private void ProcessFiles()
@@ -238,56 +290,36 @@ namespace Converter
             }
         }
 
-        private void MainForm_SizeChanged(object sender, EventArgs e)
+        private void SaveSettings()
         {
-            if (WindowState == FormWindowState.Minimized)
+            safeWatcher.EnableRaisingEvents = false;
+            Properties.Settings.Default.InputDirectory = input;
+            Properties.Settings.Default.OutputDirectory = output;
+            Properties.Settings.Default.Save();
+            string tmp1 = input;
+            string tmp2 = output;
+            if (string.IsNullOrEmpty(tmp1))
+                tmp1 = "空";
+            if (string.IsNullOrEmpty(tmp2))
+                tmp2 = "空";
+            logger.Info("保存输入目录为 {0}，输出目录为 {1}。", tmp1, tmp2);
+            if (!string.IsNullOrEmpty(input) && !string.IsNullOrEmpty(output))
             {
-                Hide();
-                notifyIcon1.Visible = true;
-                notifyIcon1.ShowBalloonTip(5000, "通知", "程序已最小化到托盘，双击图标显示主窗口。", ToolTipIcon.Info);
+                safeWatcher.Path = input;
+                safeWatcher.EnableRaisingEvents = true;
+                logger.Info("启动文件监视。");
             }
         }
 
-        private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            RecoverWindow();
-        }
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            notifyIcon1.Dispose();
-            safeWatcher.Dispose();
-        }
-
-        private void ContextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            if (e.ClickedItem.Name == "toolStripMenuItem1")
-                RecoverWindow();
-            else
-            {
-                notifyIcon1.Dispose();
-                safeWatcher.Dispose();
-                Environment.Exit(0);
-            }
-        }
-
-        private void RecoverWindow()
-        {
-            Show();
-            WindowState = FormWindowState.Normal;
-            notifyIcon1.Visible = false;
-        }
-
-        private void ButtonCheckForUpdate_Click(object sender, EventArgs e)
+        private void CheckForUpdates(bool reportErrors = true)
         {
             logger.Info("使用 AutoUpdater.NET 检查更新。");
-            AutoUpdater.ReportErrors = true;
-            AutoUpdater.Start("http://111.231.202.181/projects/converter/update/config.xml");
-        }
-
-        private void ButtonAbout_Click(object sender, EventArgs e)
-        {
-            AboutBox1 ab = new AboutBox1();
-            ab.Show();
+            AutoUpdater.ReportErrors = reportErrors;
+            AutoUpdater.RunUpdateAsAdmin = false;
+            if (DEBUG)
+                AutoUpdater.Start("http://111.231.202.181/projects/converter/updates/config-debug.xml");
+            else
+                AutoUpdater.Start("http://111.231.202.181/projects/converter/updates/config.xml");
         }
     }
 }

@@ -10,7 +10,6 @@ D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\bin\Release\AutoUpda
 D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\bin\Release\AutoUpdater.NET.xml
 D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\bin\Release\NLog.xml
 D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\bin\Release\NLog.Windows.Forms.xml
-D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\obj\Release\Converter.csproj.AssemblyReference.cache
 D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\obj\Release\Converter.AboutBox1.resources
 D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\obj\Release\Converter.MainForm.resources
 D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\obj\Release\Converter.Properties.Resources.resources
@@ -19,3 +18,4 @@ D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\obj\Release\Converte
 D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\obj\Release\Converter.csproj.CopyComplete
 D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\obj\Release\Converter.exe
 D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\obj\Release\Converter.pdb
+D:\Documents\GitHub\TAWorkers\20210829b\Converter\Converter\obj\Release\Converter.csproj.AssemblyReference.cache
