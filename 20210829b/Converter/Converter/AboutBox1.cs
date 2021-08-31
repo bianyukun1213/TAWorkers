@@ -92,15 +92,18 @@ namespace Converter
         }
         #endregion
 
+        #region 确定 按钮单击事件
         private void OkButton_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
 
+        #region 关于 窗口加载事件
         private void AboutBox1_Load(object sender, EventArgs e)
         {
             string des = "";
-            if (File.Exists("Description.txt"))
+            if (File.Exists("Description.txt")) //如果 Description.txt 存在，就读取它。
                 des = File.ReadAllText("Description.txt");
             Text = string.Format("关于 {0}", AssemblyTitle);
             labelProductName.Text = AssemblyProduct;
@@ -109,5 +112,6 @@ namespace Converter
             labelCompanyName.Text = AssemblyCompany;
             textBoxDescription.Text = des;
         }
+        #endregion
     }
 }
