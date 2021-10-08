@@ -1,0 +1,7 @@
+2021-10-08 10:18:11.2193|DEBUG|Converter.MainForm|1|程序运行在 Debug 配置下。
+2021-10-08 10:18:11.2682|INFO|Converter.MainForm|1|欢迎使用 Converter 1.3.7951.18543！
+2021-10-08 10:18:11.2811|INFO|Converter.MainForm|1|使用 AutoUpdater.NET 检查更新。
+2021-10-08 10:18:11.2981|WARN|Converter.MainForm|1|输入目录不存在，请重新指定。
+2021-10-08 10:18:12.6820|WARN|Converter.MainForm|1|输出目录不存在，请重新指定。
+2021-10-08 10:18:13.3632|INFO|Converter.MainForm|1|保存输入目录为 空，输出目录为 空。
+2021-10-08 10:18:13.3782|DEBUG|Converter.MainForm|1|StartWatching 被调用，首先停止监测文件改动。

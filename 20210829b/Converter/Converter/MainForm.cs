@@ -398,9 +398,9 @@ namespace Converter
             AutoUpdater.ReportErrors = reportErrors;
             AutoUpdater.RunUpdateAsAdmin = false;
             if (DEBUG) // 根据配置使用不同的地址。
-                AutoUpdater.Start("http://111.231.202.181/projects/converter/updates/config-debug.xml");
+                AutoUpdater.Start("https://apps.hollisdevhub.com/projects/converter/updates/config-debug.xml");
             else
-                AutoUpdater.Start("http://111.231.202.181/projects/converter/updates/config.xml");
+                AutoUpdater.Start("https://apps.hollisdevhub.com/projects/converter/updates/config.xml");
         }
         #endregion
     }
